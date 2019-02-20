@@ -47,8 +47,8 @@
 
 	loadlink(); // This will run on page load
 	setInterval(function(){
-		loadlink() // this will run after every 5 seconds
-	}, 5000);
+		loadlink() // this will run after every 1 seconds
+	}, 1000);
   </script>
 
 

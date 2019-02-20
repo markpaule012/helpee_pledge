@@ -86,7 +86,8 @@
 					  $( ".splash" ).animate({
 						opacity: "hide",
 					  }, 500, "linear", function() {
-							window.location.replace("status/thanks.php");
+							//window.location.replace("status/thanks.php");
+							window.location.replace("donate.php");
 					  });
 			  });
 		});
