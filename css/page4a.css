@@ -1,0 +1,93 @@
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 10px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 1.0; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #fff; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+	border-radius: 50%;
+
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #fff; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+	border-radius: 50%;
+
+}
+
+.footer-icon{
+	font-size: 23px ;
+	padding: 10px 0px 10px 0px;
+	display: inline-block;
+}
+
+.footer-text{
+	font-size: 20px !important;
+	display: inline-block;
+	font-family: sans-serif; 
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+footer.page2-footer {
+    background-color: #fff;
+	position: fixed !important;
+	bottom: 0 !important;
+	margin: 0px 0px 0px 0px !important;
+	padding: 0px 0px 0px 0px !important;
+	color: #b3b3b3;
+	font-size: .7em;
+	overflow: hidden;
+	width: 100vw;
+	z-index: 999;
+	opacity: 0.95 !important;
+}
+
+.fade-right { 
+    position:absolute !important; 
+	width: 100% !important;
+	left:500px;
+	}
+	
+.page4a-footer {
+    background-color: #fff;
+	position: fixed !important;
+	bottom: 0 !important;
+	margin: 0px 0px 0px 0px !important;
+	padding: 10px 0px 10px 0px !important;
+	color: #000;
+	font-size: .7em;
+	overflow: hidden;
+	width: 100vw;
+	z-index: 999;
+	opacity: 0.79 !important;
+	text-align: center;
+}
+

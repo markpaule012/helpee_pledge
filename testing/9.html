@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Helpee</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <link href="css/style.css?version=8" rel="stylesheet">
+		
+	<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel='stylesheet' href='https://npmcdn.com/flickity@2/dist/flickity.css'>
+	
+	<!--Slider-->
+	<link rel="stylesheet" href="css/slider-style.css?version=1">
+	
+	<!--buttons-->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<link rel="stylesheet" href="css/buttons-style.css?version=1">
+
+	<link rel="stylesheet" href="css/page4b.css?version=1">
+	
+	<link rel="stylesheet" href="css/checkbox.css?version=1">
+
+</head>
+
+<body>
+
+	<!--Header>
+		<div w3-include-html="include_header.html"></div> 
+		
+    <!--/.Header-->
+    
+	<header>
+        <nav class="navbar navbar-expand-lg navbar-dark page-header">
+            <div class="container">
+                    <form class="form-inline">
+						<a href="page6.html" style="color: #000; padding: 0px 0px 0px 0px;">
+								<i class="fa fa-angle-left back3-icon" aria-hidden="true" style="font-size: 20px;"></i> 
+								<div style="display: inline-block; font-size: 20px;">Back</div></div>
+						</a>
+                    </form>
+					<img src="resources/logo-small.png" style="position: absolute; right: 20px !important; height: 40px; width: 40px;"></img>
+
+            </div>
+        </nav>
+	</header>
+
+    <main  style="overflow: hidden;">
+	
+	<img src="resources/books1.jpg" style="margin-top: 100px; margin-left: 50%; transform: translateX(-150px); auto: 100px; width: 300px;"></img>
+	
+	
+	<div style="margin-top: -100px; padding-top: 0px !important;">
+	<form class="form">
+	  <h3 style="align: center;">Shipping Details</h3></style>
+	  <p type="Name:"><input placeholder="Write your name here.."></input></p>
+	  <p type="Email:"><input placeholder="Let us know how to contact you back.."></input></p>
+	  <p type="Your Item to donate:"><input placeholder="What you want to pledge to give"></input></p>
+	  
+	   <input type="checkbox" id="fruit1" name="fruit-1" value="Apple">
+	  <label for="fruit1"><u>I agree to the terms and conditions upon pledging.</u></label>
+	  <div class="extra-margins"></div>
+  <a href="page8.html">Confirm
+</a>
+
+	</form>
+	
+
+	
+	
+	
+    </main>
+
+    <!--Footer>
+		<div w3-include-html="include_footer.html"></div> 
+    <!--/.Footer-->
+
+	 <footer class="page-footer">
+		  <div class="row">
+			<div class="col-4" style="text-align: center; ">
+				<!--i class="fa fa-group ficon1" aria-hidden="true"></i-->
+				<div class="icon1s"></div>
+				<p class="footer-text-active">Campaigns</p>
+			</div>
+			<div class="col-4"  style="text-align: center; ">
+				<div class="icon2"></div>
+				<p class="footer-text">Give</p>
+			</div>
+			<div class="col-4"  style="text-align: center; ">
+				<div class="icon3"></div>
+				<p class="footer-text">Profile</p>
+			</div>
+		  </div>
+	</footer>
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+	
+	<!--Slider script-->
+	<script type="text/javascript" src="js/slider-script.js"></script>
+
+	
+	<!-- Code to include html codes-->
+	<script>
+		function includeHTML() {
+		  var z, i, elmnt, file, xhttp;
+		  /*loop through a collection of all HTML elements:*/
+		  z = document.getElementsByTagName("*");
+		  for (i = 0; i < z.length; i++) {
+			elmnt = z[i];
+			/*search for elements with a certain atrribute:*/
+			file = elmnt.getAttribute("w3-include-html");
+			if (file) {
+			  /*make an HTTP request using the attribute value as the file name:*/
+			  xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+				  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+				  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+				  /*remove the attribute, and call this function once more:*/
+				  elmnt.removeAttribute("w3-include-html");
+				  includeHTML();
+				}
+			  } 
+			  xhttp.open("GET", file, true);
+			  xhttp.send();
+			  /*exit the function:*/
+			  return;
+			}
+		  }
+		}
+	</script>
+
+    <script>
+        new WOW().init();
+		includeHTML();
+    </script>
+
+</body>
+
+</html>

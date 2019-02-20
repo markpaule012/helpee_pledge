@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Helpee</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <link href="css/style.css?version=8" rel="stylesheet">
+	<link rel="stylesheet" href="css/bot.css?Version=2">
+		
+</head>
+
+<body>
+
+	<!--Header-->
+		<div w3-include-html="include_header.html?version=2"></div> 
+    <!--/.Header-->
+     <div class="extra-margins"></div>
+     <div class="extra-margins"></div>
+     <div class="extra-margins"></div>
+
+
+	<div id="loader">
+		<div class="smiley" style="margin-top: 400px;">
+			<div class="eyes">
+				<div class="eye"></div>
+				<div class="eye"></div>
+			</div>
+			<div class="mouth"></div>
+		</div>
+		<h5 style="text-align: center; margin-top: -150px;">Transaction Succeeded. Thank you!</h5>
+	</div>
+
+
+
+
+
+
+
+
+    <!--Footer-->
+		<div w3-include-html="include_footer.html"></div> 
+    <!--/.Footer-->
+
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js">
+	</script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+	
+	<!-- Code to include html codes-->
+	<script>
+		function includeHTML() {
+		  var z, i, elmnt, file, xhttp;
+		  /*loop through a collection of all HTML elements:*/
+		  z = document.getElementsByTagName("*");
+		  for (i = 0; i < z.length; i++) {
+			elmnt = z[i];
+			/*search for elements with a certain atrribute:*/
+			file = elmnt.getAttribute("w3-include-html");
+			if (file) {
+			  /*make an HTTP request using the attribute value as the file name:*/
+			  xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+				  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+				  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+				  /*remove the attribute, and call this function once more:*/
+				  elmnt.removeAttribute("w3-include-html");
+				  includeHTML();
+				}
+			  } 
+			  xhttp.open("GET", file, true);
+			  xhttp.send();
+			  /*exit the function:*/
+			  return;
+			}
+		  }
+		}
+	</script>
+
+    <script>
+        new WOW().init();
+		includeHTML();
+    </script>
+	
+	<script>
+		$( document ).ready(function() {
+			
+			x  = setTimeout(think('normal'), 1000);
+			
+		});
+		var x;
+		var counter = 1;
+		var paction='normal';
+		
+		function think(action){
+			$(".smiley").addClass(action);
+				setTimeout(function() {
+					if (counter == 1)
+					{
+						$(".smiley").removeClass('normal'); 				
+						x = setTimeout(think('angry'), 500);
+					}
+					if (counter == 2){
+						$(".smiley").removeClass('angry'); 				
+					}
+					if (counter >= 3)
+					{
+						$(".smiley").removeClass('normal'); 				
+						x = setTimeout(think('happy'), 500);
+						clearTimeout(x);
+						  $( "#loader" ).fadeOut( "slow", function() {
+							$( "#main1" ).fadeIn( "slow", function() {
+							// Animation complete.
+							});
+						  });
+						return;
+					}
+					x = setTimeout(think('normal'), 500); 
+					counter++;
+				}, 1000);
+		}
+		
+		
+	</script>
+	
+	<!--script>
+	var htmlString, jsonString;
+	/*$.getJSON("http://man-lbucimg:8090/helpee/get/campaign/1", function(data){
+		jsonString = JSON.stringify(data)
+		var myArr = JSON.parse(jsonString);
+		alert (JSON.stringify(myArr[0]);
+    });*/
+		 
+		 htmlString = '<div class="row">' + 
+					    '<a href="page2.html">' +
+							'<div class="col-lg-4">' +
+								'<div class="card wow fadeIn" data-wow-delay="0.2s">' +
+									'<img class="img-fluid" src="resources/img1.jpg" alt="Card image cap">' +
+									'<div class="card-body">' +
+										'<h4 class="card-title">Tondo Elementary School</h4>' +
+										'<p class="card-text">Hi, I\'m Kirk. I\'m one of the guys who helped start Zomia and this Helpee page.' +
+										'</p>' +
+									'</div>' +
+								'</div>' +
+							'</div> </div> <div class="divider-new"></div>';
+		 $("#includeCampaign").append(htmlString);
+	</script-->
+
+</body>
+
+</html>

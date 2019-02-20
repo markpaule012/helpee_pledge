@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Helpee</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://npmcdn.com/flickity@2/dist/flickity.css'>
+	<link rel="stylesheet" href="css/page3.css?version=4">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <link href="css/style.css?version=1" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<a href="page2.html" style="opacity: 0.6; position: absolute; top: 20px; left: 20px;">
+			<i class="fa fa-arrow-left back3-icon" aria-hidden="true"></i> 
+			<div style="display: inline-block; font-size: 20px;">Back</div></div>
+	</a>
+
+    <main>
+	 
+        <!--Main layout-->
+        <div class="container">
+            <div class="row wow fadeIn">
+                <!--Main column-->
+                <div class="col-lg-8">		
+				     <div class="extra-margins"></div>
+
+
+
+					<div class="carousel  wow fadeIn" data-flickity='{ "prevNextButtons": false}'>
+						  <div class="carousel-cell" id="carousel-cell1"><a href="page4a.html"><img src="resources/additional/donate_money.png" alt="First slide" class="img-fluid" style="max-width: 100%"></div></a>
+						  <div class="carousel-cell"  id="carousel-cell1"><a href="page4b.html"><img src="resources/additional/donate_item.png" alt="Second slide" class="img-fluid" style="max-width: 100%"></div></a>
+						  <div class="carousel-cell" id="carousel-cell1"><img src="resources/additional/donate_services.png" alt="Third slide" class="img-fluid"></div>
+					</div>
+			
+			
+                </div>
+
+
+                <!--/.Main column-->
+
+            </div>
+        </div>
+        <!--/.Main layout-->
+
+    </main>
+
+    <!--Footer>
+		<div w3-include-html="include_footer.html"></div> 
+    <!--/.Footer-->
+
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+	<script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
+
+	
+	<!--Hash Script-->
+	<script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+	
+	<!-- Code to include html codes-->
+	<script>
+		function includeHTML() {
+		  var z, i, elmnt, file, xhttp;
+		  /*loop through a collection of all HTML elements:*/
+		  z = document.getElementsByTagName("*");
+		  for (i = 0; i < z.length; i++) {
+			elmnt = z[i];
+			/*search for elements with a certain atrribute:*/
+			file = elmnt.getAttribute("w3-include-html");
+			if (file) {
+			  /*make an HTTP request using the attribute value as the file name:*/
+			  xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+				  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+				  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+				  /*remove the attribute, and call this function once more:*/
+				  elmnt.removeAttribute("w3-include-html");
+				  includeHTML();
+				}
+			  } 
+			  xhttp.open("GET", file, true);
+			  xhttp.send();
+			  /*exit the function:*/
+			  return;
+			}
+		  }
+		}
+	</script>
+	
+	<script>
+		$(document).ready(function(){
+			  $("#main3").animate({opacity:"show"}, 200);
+		});
+	</script>
+
+    <script>
+        new WOW().init();
+		includeHTML();
+    </script>
+
+</body>
+
+</html>

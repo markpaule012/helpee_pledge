@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Helpee</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel='stylesheet' href='https://npmcdn.com/flickity@2/dist/flickity.css'>
+	<link rel="stylesheet" href="css/page2.css?version=13">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <link href="css/style.css?version=2" rel="stylesheet">
+	
+	    <link href="css/helpeeAI.css?version=2" rel="stylesheet">
+
+	
+</head>
+
+<body>
+	    <a href="page1.html"><span class="fa fa-angle-left fade-right1" style="font-size: 3em; color: #fff; top: 10px; left: 20px; position: absolute; opacity: 0.7; z-index: 3;"></span></a>
+
+		<div class="carousel wow fadeIn" data-flickity='{ "autoPlay": true, "prevNextButtons": false}'>
+			  <div class="carousel-cell"><img src="resources/pc1.jpg" alt="First slide" class="img-fluid"></div>
+			  <div class="carousel-cell"><img src="resources/pc2.jpg" alt="Second slide" class="img-fluid"></div>	
+			  <div class="carousel-cell"><img src="resources/pc3.jpg" alt="Third slide" class="img-fluid"></div>
+		</div>
+
+	
+
+    <div>
+
+      <!-- http://www.tiagoalexandrelopes.com -->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+
+
+
+<p>CSS only version for Matthew Potter @askmp ;)</p>
+    <input id="happy" type="radio" name="smiley" value="Happy">
+    <label for="happy">:)</label>
+    <input id="normal" type="radio" name="smiley" value="Normal">
+    <label for="normal">:|</label>
+    <input id="angry" type="radio" name="smiley" value="Angry">
+    <label for="angry">:(</label>
+
+
+
+
+<div class="smiley">
+	<div class="eyes">
+		<div class="eye"></div>
+		<div class="eye"></div>
+	</div>
+	<div class="mouth"></div>
+</div>
+  
+    </div>
+
+    <!--Footer-->
+	<footer class="page2-footer">
+	  <div class="row">
+		<div class="col-6" style="text-align: center; background-color: #f2dede; color: #a94442; border-right: 1px solid white;">
+				<i class="fa fa-exclamation-triangle footer-icon" aria-hidden="true"><div class="footer-text"> Report</div></i>
+		</div>
+		<div class="col-6" style="text-align: center; background-color: #31708f; color: #fff; padding: 0px 0px 10px 0px;">
+				 <a href="page3.html"><i class="fa fa-share-square  footer-icon" aria-hidden="true"></h1><div class="footer-text"> Donate</div></i></a>
+		</div>
+	  </div>
+	</footer>
+    <!--/.Footer-->
+
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+	<script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
+
+	
+	<!-- Code to include html codes-->
+	<script>
+		function includeHTML() {
+		  var z, i, elmnt, file, xhttp;
+		  /*loop through a collection of all HTML elements:*/
+		  z = document.getElementsByTagName("*");
+		  for (i = 0; i < z.length; i++) {
+			elmnt = z[i];
+			/*search for elements with a certain atrribute:*/
+			file = elmnt.getAttribute("w3-include-html");
+			if (file) {
+			  /*make an HTTP request using the attribute value as the file name:*/
+			  xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+				  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+				  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+				  /*remove the attribute, and call this function once more:*/
+				  elmnt.removeAttribute("w3-include-html");
+				  includeHTML();
+				}
+			  } 
+			  xhttp.open("GET", file, true);
+			  xhttp.send();
+			  /*exit the function:*/
+			  return;
+			}
+		  }
+		}
+	</script>
+	
+	<script>
+		$(document).ready(function(){
+			  $(".fade-right").animate({left:0, opacity:"show"}, 500);
+			  $(".fade-right1").animate({left:10, opacity:"show"}, 500);
+		});
+	</script>
+
+    <script>
+        new WOW().init();
+		includeHTML();
+    </script>
+	
+	<!-- Custom Script -->
+	
+
+</body>
+
+</html>
